@@ -1,6 +1,6 @@
 # AppleBasic IDE
 
-A Windows-based editor and analysis tool for Apple II BASIC source code.
+A Windows-based editor, analyzer, and renumbering tool for Apple II BASIC source code.
 
 ## Features
 
@@ -11,14 +11,15 @@ A Windows-based editor and analysis tool for Apple II BASIC source code.
 - Syntax highlighting
 - Issue tracking panel
 - Current execution line highlighting
-- ProgramLines internal model
+- Internal program model for analysis and editing
 
 ## Example Analysis Features
 
-
 - Detect missing GOTO targets
 - Detect missing GOSUB targets
+- Detect duplicate line numbers
 - Track current source line
+- Display issues in a dedicated panel
 
 
 ## Screenshot
