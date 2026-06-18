@@ -4,14 +4,14 @@ A Windows-based editor and analysis tool for Apple II BASIC source code.
 
 ## Features
 
-Renumber BASIC programs
-Update GOTO/GOSUB references during renumber
-Handle shorthand IF...THEN <line>
-Detect duplicate line numbers
-Syntax highlighting
-Issue tracking panel
-Current execution line highlighting
-ProgramLines internal model
+- Renumber BASIC programs
+- Update GOTO/GOSUB references during renumber
+- Handle shorthand IF...THEN <line>
+- Detect duplicate line numbers
+- Syntax highlighting
+- Issue tracking panel
+- Current execution line highlighting
+- ProgramLines internal model
 
 ## Example Analysis Features
 
