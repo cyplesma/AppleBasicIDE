@@ -1,41 +1,38 @@
-# AppleBasic IDE
+# Apple BASIC IDE
 
-A Windows-based editor and analysis tool for Apple II BASIC source code.
+A Windows editor and analysis tool for Apple II BASIC source code.
 
 ## Features
 
-- GOTO validation
-- GOSUB validation
-- Current line tracking
-- Apple BASIC source file editing
+- Open and save `.AB2` and text files
+- Tracks unsaved changes and prompts before closing
+- Validates `GOTO`, shorthand `THEN`, and `GOSUB` targets
+- Detects duplicate and malformed line numbers
+- Highlights the current line, referenced targets, comments, and errors
+- Renumbers programs and updates branch targets
+- Find, Select All, Cut, Copy, and Paste commands
+- Double-click an analysis issue to jump to its source line
 
-## Example Analysis Features
+Apple BASIC project files begin with an `APPLEIIBASIC` header. The header is
+managed automatically and is not shown in the editor.
 
+## Build
 
-- Detect missing GOTO targets
-- Detect missing GOSUB targets
-- Track current source line
+Open `AppleBasic_IDE.sln` in Visual Studio, or run:
 
-
-## Screenshot
-
-
-![AppleBasicIDE](AppleBasicIDE.jpg)
-
+```powershell
+dotnet build AppleBasic_IDE.sln
+```
 
 ## Requirements
 
 - Windows
-- .NET 5.0
+- .NET 5.0 Desktop Runtime or SDK
 
-## Status
+## Screenshot
 
-Active hobby project currently under development.
-
-## Future Plans
-
-- Detect duplicate line numbers
-- Highlight REM statements
+![Apple BASIC IDE](AppleBasicIDE.jpg)
 
 ## Author
-- Mike Cyples
+
+Mike Cyples
