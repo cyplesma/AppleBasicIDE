@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AppleBasic_IDE
 {
     public class BasicLine
@@ -13,9 +14,13 @@ namespace AppleBasic_IDE
         public string Text { get; set; } = "";
         public string CodeOnly { get; set; } = "";
 
+        public int iRemStartIndex = -1;
+
         public bool IsNew { get; set; }
         public bool IsChanged { get; set; }
         public bool IsSaved { get; set; }
+
+        public LineHighlightType eHighlightType { get; set; }
 
         public bool IsCurrentExecutionLine { get; set; }
 
@@ -48,6 +53,17 @@ namespace AppleBasic_IDE
         public int Step { get; set; } = 10;
     }
 
+    public class RenumberLines
+    {
+        public int EditorLineIndex { get; set; }
+        public int iOriginalLine { get; set; }
+        public int iNewLine { get; set; }
+
+        // GOTO / GOSUB / THEN / ON...GOTO target numbers
+        public List<int> iOriginalList { get; set; } = new List<int>();
+        public List<int> iNewList { get; set; } = new List<int>();
+    }
+
     public enum LineStatus
     {
         Normal,
@@ -66,6 +82,15 @@ namespace AppleBasic_IDE
         MissingHeader,
         HasWarnings,
         HasErrors
+    }
+
+    public enum LineHighlightType
+    {
+        Normal,
+        CurrentLine,
+        ReferencedLine,
+        ErrorLine,
+        ExecutionLine
     }
 
 }

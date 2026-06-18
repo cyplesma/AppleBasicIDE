@@ -1,0 +1,13 @@
+﻿# Visual Studio
+.vs/
+bin/
+obj/
+.dotnet/
+
+# User specific
+*.user
+*.suo
+
+# Build output
+Debug/
+Release/
